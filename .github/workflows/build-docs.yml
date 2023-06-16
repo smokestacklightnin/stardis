@@ -1,6 +1,9 @@
 name: build-docs
 on: push
 
+env:
+  DEPLOY_BRANCH: gh-pages               # deployed docs branch
+
 defaults:
   run:
     shell: bash -le {0}
