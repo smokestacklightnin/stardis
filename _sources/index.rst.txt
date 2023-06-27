@@ -13,9 +13,10 @@ This is the documentation for stardis.
    Running the Code <running_the_code>
    Bibliography <bibliography>
 	     
-Indices and tables
-==================
+..
+   Indices and tables
+   ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   * :ref:`genindex`
+   * :ref:`modindex`
+   * :ref:`search`
