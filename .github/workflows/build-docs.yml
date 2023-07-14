@@ -31,7 +31,7 @@ jobs:
         with:
           path: /usr/share/miniconda3/envs/stardis
           key: conda-linux-64-lockfile
-                  
+
       - name: Update Conda Environment
         id: update-env
         run: |
