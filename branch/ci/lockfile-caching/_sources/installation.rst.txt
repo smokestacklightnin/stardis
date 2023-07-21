@@ -22,7 +22,7 @@ the following in the terminal (replacing ``{platform}`` with either
 
 ::
 
-   $ cd <path-to-repository>
+   $ wget -q https://github.com/tardis-sn/tardis/releases/latest/download/conda-{platform}-64.lock
    $ conda create --name stardis --file conda-{platform}-64.lock
    $ conda activate stardis
    $ pip install git+https://github.com/tardis-sn/tardis.git@release-2023.04.16
