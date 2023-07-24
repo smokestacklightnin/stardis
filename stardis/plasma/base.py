@@ -71,7 +71,8 @@ class H2Density(ProcessingPlasmaProperty):
 
     outputs = ("h2_density",)
 
-    def calculate(self, ion_number_density, t_rad):
+    @staticmethod
+    def calculate(ion_number_density, t_rad):
         t_rad = t_rad * u.K
         h_neutral_density = ion_number_density.loc[1, 0]
         thermal_de_broglie = (
