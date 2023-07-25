@@ -67,7 +67,7 @@ jobs:
         id: install-stardis
         # shell: bash -l {0}
         run: |
-          python setup.py develop
+          pip install git+https://github.com/tardis-sn/stardis.git@main
 
       - name: Run tests
         run: pytest stardis ${{ env.PYTEST_FLAGS }}          
