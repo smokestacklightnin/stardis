@@ -70,7 +70,7 @@ jobs:
           pip install git+https://github.com/${{ github.repository }}.git@${{ github.head_ref || github.ref_name}}
 
       - name: Run tests
-        run: python -m stardis.tests.run_all ${{ env.PYTEST_FLAGS }}          
+        run: pytest stardis ${{ env.PYTEST_FLAGS }}          
 
       - name: Upload to Codecov
         run: bash <(curl -s https://codecov.io/bash)
