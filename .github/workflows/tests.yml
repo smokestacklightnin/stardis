@@ -7,7 +7,7 @@ on:
 
 env:
   CACHE_NUMBER: 0  # increase to reset cache manually
-  PYTEST_FLAGS: --cov=stardis --cov-report=xml --cov-report=html --nbmake
+  PYTEST_FLAGS: --cov=stardis --cov-report=xml --cov-report=html --nbmake --nbmake-kernel=python3
   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 defaults:
