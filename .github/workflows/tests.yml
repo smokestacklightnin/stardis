@@ -63,6 +63,10 @@ jobs:
         run: |
           python setup.py develop
 
+      - name: Install nbmake
+        id: install-nbmake
+        run: |
+          pip install nbmake
       - name: Run tests
         run: pytest stardis ${{ env.PYTEST_FLAGS }}          
 
