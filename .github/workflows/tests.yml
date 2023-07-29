@@ -37,9 +37,9 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - uses: Jimver/cuda-toolkit@v0.2.11
-        id: cuda-toolkit
-        if: contains(${{ matrix.label }}, cuda)
+      # - uses: Jimver/cuda-toolkit@v0.2.11
+      #   id: cuda-toolkit
+      #   if: contains(${{ matrix.label }}, cuda)
         
       - uses: actions/checkout@v2
 
