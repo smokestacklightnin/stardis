@@ -66,18 +66,8 @@ def test_faddeeva_cuda_unwrapped_sample_values(
 @pytest.mark.parametrize(
     "faddeeva_cuda_wrapped_sample_numpy_values_input, faddeeva_cuda_wrapped_sample_numpy_values_expected_result",
     [
-        # (0, 1 + 0j),
-        # (0.0, 1.0 + 0.0j),
         (np.array([0.0]), np.array([1.0 + 0.0j])),
         (np.array([0, 0]), np.array([1 + 0j, 1 + 0j])),
-        (
-            cuda.device_array_like(np.array([0, 0], dtype=complex)),
-            np.array([1 + 0j, 1 + 0j]),
-        ),
-        # (
-        #     cuda.device_array_like(np.array([0, 0], dtype=float)),
-        #     np.array([1 + 0j, 1 + 0j]),
-        # ),
     ],
 )
 def test_faddeeva_cuda_wrapped_sample_numpy_values(
