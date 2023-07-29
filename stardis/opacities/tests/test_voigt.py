@@ -80,6 +80,9 @@ def test_faddeeva_cuda_wrapped_sample_numpy_values(
     )
 
 
+@pytest.mark.skipif(
+    not GPUs_available, reason="No GPU is available to test CUDA function"
+)
 @pytest.mark.parametrize(
     "faddeeva_cuda_wrapped_sample_cuda_values_input, faddeeva_cuda_wrapped_sample_cuda_values_expected_result",
     [
