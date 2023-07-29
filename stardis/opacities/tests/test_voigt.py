@@ -121,15 +121,17 @@ def test_faddeeva_cuda_wrapped_sample_cuda_values(
 @pytest.mark.parametrize(
     "faddeeva_cuda_wrapped_noncomplex_input_input",
     [
-        cuda.device_array_like(np.array([0, 0], dtype=int)),
-        cuda.device_array_like(np.array([0, 0], dtype=float)),
+        np.array([0, 0], dtype=int),
+        np.array([0, 0], dtype=float),
     ],
 )
 def test_faddeeva_cuda_wrapped_noncomplex_input(
     faddeeva_cuda_wrapped_noncomplex_input_input,
 ):
     with pytest.raises(TypeError):
-        _ = faddeeva_cuda(faddeeva_cuda_wrapped_noncomplex_input_input)
+        _ = faddeeva_cuda(
+            cuda.device_array_like(faddeeva_cuda_wrapped_noncomplex_input_input)
+        )
 
 
 test_voigt_profile_division_by_zero_test_values = [
