@@ -5,7 +5,7 @@ from numba import cuda
 from stardis.opacities.voigt import (
     faddeeva,
     _faddeeva_cuda,
-    # faddeeva_cuda,
+    faddeeva_cuda,
     voigt_profile,
 )
 
