@@ -68,4 +68,4 @@ and then run the following in the terminal:
    $ git remote add upstream git@github.com:tardis-sn/stardis.git
    $ git fetch upstream
    $ git checkout upstream/main
-   $ python setup.py develop
+   $ pip install -e .[test]
