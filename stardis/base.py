@@ -36,7 +36,9 @@ def run_stardis(config_fname, tracing_lambdas_or_nus):
     stardis.base.STARDISOutput
         Contains all the key outputs of the STARDIS simulation.
     """
-
+    raise Exception(
+        "This exception gets raised to demonstrate that nbmake halts when an exception is raised."
+    )
     tracing_lambdas = tracing_lambdas_or_nus.to(u.AA, u.spectral())
     tracing_nus = tracing_lambdas_or_nus.to(u.Hz, u.spectral())
 
@@ -116,7 +118,6 @@ class STARDISOutput:
     def __init__(
         self, stellar_plasma, stellar_model, alphas, gammas, doppler_widths, F_nu, nus
     ):
-
         self.stellar_plasma = stellar_plasma
         self.stellar_model = stellar_model
         self.alphas = alphas
