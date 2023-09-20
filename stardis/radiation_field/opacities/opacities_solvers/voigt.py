@@ -2,8 +2,18 @@ import numpy as np
 import numba
 from numba import cuda
 import cmath
+from pathlib import Path
+from importlib.machinery import PathFinder
 
-GPUs_available = cuda.is_available()
+from hydra import compose, initialize
+
+with initialize(
+    version_base=None,
+    config_path=pathlib.Path(m.PathFinder.find_spec("stardis").origin).parent.parent,
+    job_name="stardis",
+):
+    cfg = compose(config_name="config")
+GPUs_available = cfg.USE_GPU
 
 if GPUs_available:
     import cupy as cp
